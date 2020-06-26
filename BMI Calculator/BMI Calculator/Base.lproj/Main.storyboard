@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Weight(in kilograms)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQ1-VR-bTF">
+                                <rect key="frame" x="10" y="104" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Height(in meters)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dch-ek-fZu">
+                                <rect key="frame" x="10" y="201" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5b-Ye-Dyz">
+                                <rect key="frame" x="10" y="391" width="394" height="26.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                <color key="textColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9K-Sf-vVo">
+                                <rect key="frame" x="150" y="307" width="114" height="33"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="19"/>
+                                <state key="normal" title="Calculate BMI">
+                                    <color key="titleColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Apv-1C-9B9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dch-ek-fZu" secondAttribute="trailing" constant="10" id="4ir-8h-V9n"/>
+                            <constraint firstItem="O9K-Sf-vVo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FK1-s8-7LZ"/>
+                            <constraint firstItem="O9K-Sf-vVo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="Ib1-Z0-bYd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O9K-Sf-vVo" secondAttribute="trailing" constant="150" id="KSc-qt-200"/>
+                            <constraint firstItem="h5b-Ye-Dyz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="PhL-KB-IRt"/>
+                            <constraint firstItem="XQ1-VR-bTF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="Rp3-G9-Hhv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h5b-Ye-Dyz" secondAttribute="trailing" constant="10" id="WGc-0P-SEh"/>
+                            <constraint firstItem="O9K-Sf-vVo" firstAttribute="top" secondItem="Dch-ek-fZu" secondAttribute="bottom" constant="72" id="Wg2-Js-z7r"/>
+                            <constraint firstItem="XQ1-VR-bTF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="eej-Cc-dNT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O9K-Sf-vVo" secondAttribute="trailing" id="i1j-56-zri"/>
+                            <constraint firstItem="Dch-ek-fZu" firstAttribute="top" secondItem="XQ1-VR-bTF" secondAttribute="bottom" constant="63" id="j2f-SK-ant"/>
+                            <constraint firstItem="h5b-Ye-Dyz" firstAttribute="top" secondItem="O9K-Sf-vVo" secondAttribute="bottom" constant="51" id="msB-C9-Ry9"/>
+                            <constraint firstItem="Dch-ek-fZu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nuO-g8-ZvD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XQ1-VR-bTF" secondAttribute="trailing" constant="10" id="pCa-0j-mZq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bmiLabel" destination="h5b-Ye-Dyz" id="7g2-KX-Cd7"/>
+                        <outlet property="heightTextField" destination="Dch-ek-fZu" id="66N-Sf-TFB"/>
+                        <outlet property="weightTextField" destination="XQ1-VR-bTF" id="lJM-v3-3CO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="119.86607142857142"/>
+        </scene>
+    </scenes>
+</document>
